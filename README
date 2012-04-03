@@ -7,13 +7,19 @@
 
 ----------------------------------------------
 
-- Instalación
+- Instalación:
 
 ejecute sudo install.sh en una terminal
 
 - Desinstalación
 
 ejecute sudo uninstall.sh en una terminal
+
+----------------------------------------------
+
+- Dependecias:
+
+python, python-gobject, scrot 
 
 ----------------------------------------------
 
@@ -24,6 +30,12 @@ run the sudo install.sh file in the terminal
 - Uninstalling
 
 run the sudo uninstall.sh file in the terminal
+
+----------------------------------------------
+
+- Depends On:
+
+python, python-gobject, scrot 
 
 ----------------------------------------------
 
