@@ -1,6 +1,6 @@
 # Maintainer: DaeS
 pkgname=impyh
-pkgver=0.1
+pkgver=20120403
 pkgrel=1
 pkgdesc="a GUI for scrot written in python"
 arch=('i686' 'x86_64')
@@ -8,13 +8,13 @@ url="https://github.com/daesdp/Impyh"
 license=('GPL')
 depends=('python' 'python-gobject' 'scrot')
 install=.INSTALL
-_gitroot="git://git@github.com:daesdp/Impyh.git"
+_gitroot="git://git@github.com/daesdp/Impyh.git"
 _gitname="Impyh"
 
 build() {
   msg "Connecting to GIT server...."
   git clone $_gitroot
-  cd "$srcdir/$_gitname/$pkgname-$pkgver"
+  cd "${srcdir}/${_gitname}/${pkgname}-${pkgver}"
 }
 
 package() {
