@@ -2,8 +2,8 @@ Impyh by DaeS
 
 - Instalación
 
-ejecute el script install.sh en una terminal
+ejecute sudo install.sh en una terminal
 
 - Desinstalación
 
-ejecute el script uninstall.sh en una terminal
+ejecute sudo uninstall.sh en una terminal
