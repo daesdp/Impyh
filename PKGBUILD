@@ -8,10 +8,8 @@ url="https://github.com/daesdp/Impyh"
 license=('GPL')
 depends=('python' 'python-gobject' 'scrot')
 install=.INSTALL
-#source=()
 _gitroot="git://git@github.com:daesdp/Impyh.git"
 _gitname="Impyh"
-md5sums=('e0f97ccb8077acbdcbac004ad5fdee89')
 
 build() {
   msg "Connecting to GIT server...."
