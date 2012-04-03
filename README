@@ -5,7 +5,7 @@
   \/_/   \/_/  \/_/   \/_/     \/_____/   \/_/\/_/ 
                                                    
 
------------------------------------------
+----------------------------------------------
 
 - Instalación
 
@@ -15,7 +15,17 @@ ejecute sudo install.sh en una terminal
 
 ejecute sudo uninstall.sh en una terminal
 
------------------------------------------
+----------------------------------------------
+
+- Installation
+
+run the sudo install.sh file in the terminal
+
+- Uninstalling
+
+run the sudo uninstall.sh file in the terminal
+
+----------------------------------------------
 
   __                 __                      
  |  |--..--.--.  .--|  |.---.-..-----..-----.
