@@ -103,7 +103,8 @@
   <object class="GtkImage" id="image1">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="stock">gtk-new</property>
+    <property name="stock">gtk-dnd</property>
+    <property name="pixel_size">16</property>
   </object>
   <object class="GtkImage" id="image2">
     <property name="visible">True</property>
@@ -265,6 +266,7 @@
           <object class="GtkToolbar" id="toolbar">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
+            <property name="toolbar_style">icons</property>
             <child>
               <object class="GtkToolButton" id="save">
                 <property name="use_action_appearance">False</property>
@@ -274,7 +276,7 @@
                 <property name="use_action_appearance">False</property>
                 <property name="label" translatable="yes">save</property>
                 <property name="use_underline">True</property>
-                <property name="stock_id">gtk-save</property>
+                <property name="icon_name">document-save-as</property>
                 <signal name="clicked" handler="onclik_save" swapped="no"/>
               </object>
               <packing>
@@ -301,9 +303,9 @@
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Aumenta imagen</property>
                 <property name="use_action_appearance">False</property>
-                <property name="label" translatable="yes">zoom_inc</property>
+                <property name="label" translatable="yes">amplify</property>
                 <property name="use_underline">True</property>
-                <property name="stock_id">gtk-zoom-in</property>
+                <property name="icon_name">zoom-in</property>
                 <signal name="clicked" handler="onclik_zm_inc" swapped="no"/>
               </object>
               <packing>
@@ -318,9 +320,9 @@
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Encoge imagen</property>
                 <property name="use_action_appearance">False</property>
-                <property name="label" translatable="yes">zoom_dec</property>
+                <property name="label" translatable="yes">decrease</property>
                 <property name="use_underline">True</property>
-                <property name="stock_id">gtk-zoom-out</property>
+                <property name="icon_name">zoom-out</property>
                 <signal name="clicked" handler="onclik_zm_dec" swapped="no"/>
               </object>
               <packing>
@@ -335,7 +337,7 @@
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Muestra imagen tamaño original</property>
                 <property name="use_action_appearance">False</property>
-                <property name="label" translatable="yes">zoom_ori</property>
+                <property name="label" translatable="yes">zoom original</property>
                 <property name="use_underline">True</property>
                 <property name="icon_name">zoom-original</property>
                 <signal name="clicked" handler="onclik_zmorig" swapped="no"/>
@@ -352,7 +354,7 @@
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Ajusta imagen a la ventana</property>
                 <property name="use_action_appearance">False</property>
-                <property name="label" translatable="yes">zoom_best</property>
+                <property name="label" translatable="yes">zoom best fit</property>
                 <property name="use_underline">True</property>
                 <property name="icon_name">zoom-best-fit</property>
                 <signal name="clicked" handler="onclik_zmbest" swapped="no"/>
@@ -381,9 +383,9 @@
                 <property name="can_focus">False</property>
                 <property name="tooltip_text" translatable="yes">Cierra Impyh</property>
                 <property name="use_action_appearance">False</property>
-                <property name="label" translatable="yes">salir</property>
+                <property name="label" translatable="yes">exit</property>
                 <property name="use_underline">True</property>
-                <property name="stock_id">gtk-quit</property>
+                <property name="icon_name">application-exit</property>
                 <signal name="clicked" handler="onclik_exit" swapped="no"/>
               </object>
               <packing>
@@ -527,7 +529,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkStatusbar" id="statusbar1">
+          <object class="GtkStatusbar" id="statusbar">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="orientation">vertical</property>

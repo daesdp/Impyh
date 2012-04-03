@@ -23,7 +23,7 @@ import os
 
 # Variables
 user = os.path.expanduser("~")
-v_logo ="logo.png"
+v_logo ="icons/logo.png"
 v_fl_impyh = user + "/.impyh"
 v_mtmp = user + "/.impyh/.temp"
 v_inter = GdkPixbuf.InterpType.BILINEAR
