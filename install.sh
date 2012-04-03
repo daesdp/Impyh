@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cp -Rf impyh-0.1/* /
+cp -Rf impyh/* /
 chmod 775 /usr/share/impyh/ -R
 chmod a+x /usr/bin/impyh
 
