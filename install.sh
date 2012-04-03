@@ -1,8 +1,6 @@
 #!/bin/bash
 
-cp -Rf impyh /usr/share
-echo "#!/bin/bash" > /usr/bin/impyh
-echo "cd /usr/share/impyh && python impyh.py" >> /usr/bin/impyh
+cp -Rf impyh-0.1/* /
 chmod 775 /usr/share/impyh/ -R
 chmod a+x /usr/bin/impyh
 
