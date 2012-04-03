@@ -1,6 +1,6 @@
 # Maintainer: DaeS
 pkgname=impyh
-pkgver=20120403
+pkgver=0.1
 pkgrel=1
 pkgdesc="a GUI for scrot written in python"
 arch=('i686' 'x86_64')
