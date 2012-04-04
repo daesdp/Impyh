@@ -5,12 +5,31 @@
     <property name="can_focus">False</property>
     <property name="halign">center</property>
     <property name="border_width">5</property>
+    <property name="resizable">False</property>
+    <property name="modal">True</property>
     <property name="window_position">mouse</property>
     <property name="type_hint">dialog</property>
+    <property name="has_resize_grip">False</property>
     <property name="program_name">Impyh</property>
-    <property name="version">0.01</property>
-    <property name="comments" translatable="yes">By DaeS</property>
+    <property name="version">0.5</property>
+    <property name="comments" translatable="yes">Comfortable GUI for scrot written in python.</property>
+    <property name="website">https://github.com/daesdp/Impyh</property>
+    <property name="website_label" translatable="yes">Impyh</property>
+    <property name="license" translatable="yes">This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.</property>
     <property name="authors">DaeS</property>
+    <property name="logo">logo2.png</property>
+    <property name="wrap_license">True</property>
     <property name="license_type">gpl-3-0</property>
     <child internal-child="vbox">
       <object class="GtkBox" id="aboutdialog-vbox1">
@@ -42,7 +61,9 @@
     <property name="modal">True</property>
     <property name="window_position">mouse</property>
     <property name="type_hint">dialog</property>
+    <property name="urgency_hint">True</property>
     <property name="action">save</property>
+    <property name="do_overwrite_confirmation">True</property>
     <child internal-child="vbox">
       <object class="GtkBox" id="filechooserdialog-vbox1">
         <property name="can_focus">False</property>
@@ -53,8 +74,8 @@
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
-              <object class="GtkButton" id="bguardar">
-                <property name="label" translatable="yes">Save</property>
+              <object class="GtkButton" id="bcancell">
+                <property name="label" translatable="yes">Cancell</property>
                 <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
@@ -68,11 +89,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton" id="bcancelar">
-                <property name="label" translatable="yes">Cancell</property>
+              <object class="GtkButton" id="bguardar">
+                <property name="label" translatable="yes">Save</property>
                 <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
+                <property name="can_default">True</property>
                 <property name="receives_default">True</property>
                 <property name="use_action_appearance">False</property>
               </object>
@@ -96,20 +118,18 @@
       </object>
     </child>
     <action-widgets>
+      <action-widget response="-6">bcancell</action-widget>
       <action-widget response="-5">bguardar</action-widget>
-      <action-widget response="-6">bcancelar</action-widget>
     </action-widgets>
   </object>
   <object class="GtkImage" id="image1">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="stock">gtk-dnd</property>
     <property name="pixel_size">16</property>
   </object>
   <object class="GtkImage" id="image2">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
-    <property name="stock">gtk-zoom-fit</property>
   </object>
   <object class="GtkMenu" id="popmenu">
     <property name="visible">True</property>
@@ -331,6 +351,18 @@
               </packing>
             </child>
             <child>
+              <object class="GtkSeparatorToolItem" id="toolbutton2">
+                <property name="use_action_appearance">False</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="use_action_appearance">False</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
               <object class="GtkToolButton" id="zoom_ori">
                 <property name="use_action_appearance">False</property>
                 <property name="visible">True</property>
@@ -358,6 +390,35 @@
                 <property name="use_underline">True</property>
                 <property name="icon_name">zoom-best-fit</property>
                 <signal name="clicked" handler="onclik_zmbest" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkSeparatorToolItem" id="toolbutton3">
+                <property name="use_action_appearance">False</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="use_action_appearance">False</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkToolButton" id="clear_list">
+                <property name="use_action_appearance">False</property>
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="tooltip_text" translatable="yes">Borra la lista de imagenes</property>
+                <property name="use_action_appearance">False</property>
+                <property name="label" translatable="yes">Clear</property>
+                <property name="use_underline">True</property>
+                <property name="icon_name">editclear</property>
+                <signal name="clicked" handler="onclik_clear" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -506,7 +567,7 @@
                     <property name="margin_right">5</property>
                     <property name="max_length">3</property>
                     <property name="width_chars">3</property>
-                    <property name="placeholder_text">1</property>
+                    <property name="placeholder_text">0</property>
                   </object>
                   <packing>
                     <property name="expand">False</property>

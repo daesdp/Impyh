@@ -1,0 +1,12 @@
+
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Categories=GNOME;Application;Graphics;
+Name=Impyh
+Name[es_ES]=Impyh
+Icon=/usr/share/impyh/logo2.png
+Exec=impyh
+Comment=Comfortable GUI for scrot written in python
+StartupNotify=true
+GenericName=
