@@ -26,7 +26,7 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from gi.repository import Gtk, Gdk, GdkPixbuf
+from gi.repository import Gtk,Gdk , GdkPixbuf
 from gi.repository.GdkPixbuf import Pixbuf
 import os
 
@@ -325,6 +325,14 @@ class main:
 
         msg_statusbar = self.status_bar.get_context_id("descripcion")
         self.status_bar.push(msg_statusbar, "  Deleted list")
+
+        self.a_save.set_sensitive(False)
+        self.a_msave.set_sensitive(False)
+        self.a_zminc.set_sensitive(False)
+        self.a_zmdec.set_sensitive(False)
+        self.a_zmori.set_sensitive(False)
+        self.a_zmbest.set_sensitive(False)
+        self.a_clist.set_sensitive(False)
 
     def show_about(self,widget):
         self.dg_about.run()
