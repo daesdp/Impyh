@@ -105,7 +105,8 @@ class main:
                 "onclik_save": self.show_save,
                 "onclik_exit": self.app_exit,
                 "onclik_tray": self.click_tray,
-                "onclik_clear": self.clear_list}
+                "onclik_clear": self.clear_list,
+                "onclik_dest": self.app_exit}
         builder.connect_signals(dict)
 
         self.m_windows.set_size_request(650,400)
